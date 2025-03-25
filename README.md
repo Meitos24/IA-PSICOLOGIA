@@ -1,9 +1,36 @@
 # IA-PSICOLOGIA
 
-📌 2. Configurar el Backend (Django)
-python -m venv myenv  # Creación entorno virtual
-source myenv/bin/activate  # Activar entorno (Linux/Mac)
-myenv\Scripts\activate  # Activar entorno (Windows)
-pip install -r requirements.txt  # Instalar dependencias
-python manage.py migrate  # Aplicar migraciones
-python manage.py runserver  # Iniciar servidor Django
+📌 **Configurar el Backend (Django)**
+
+---
+
+### 🚀 1. Crear y Activar el Entorno Virtual
+
+
+
+Navega al directorio de proyecto
+```sh
+cd backend
+```
+
+Crear entorno virtual
+```sh 
+python -m venv myenv
+```
+
+Activar entorno virtual (Linux/Mac)
+```sh 
+source myenv/bin/activate
+```
+
+Activar entorno virtual (Windows)
+```sh
+myenv\Scripts\activate
+```
+
+Corre el servidor
+```sh
+cd mysite
+python manage.py runserver
+```
+
