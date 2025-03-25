@@ -1,0 +1,24 @@
+# Archivos de Python
+*.pyc
+__pycache__/
+
+# Configuración de entornos virtuales
+venv/
+myenv/
+env/
+*.sqlite3
+
+# Archivos de configuración de Django
+*.log
+*.pot
+*.py[co]
+local_settings.py
+
+# Archivos estáticos y de caché
+staticfiles/
+media/
+node_modules/
+
+# Configuración de VS Code y PyCharm
+.vscode/
+.idea/
