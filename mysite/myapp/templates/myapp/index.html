@@ -3,15 +3,85 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Mi App</title>
+        <meta name="description" content="Interfaz Mi App">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                padding: 0;
+                background-color: #f4f4f9;
+            }
+            h1 {
+                color: #333;
+            }
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            form {
+                margin-bottom: 20px;
+            }
+            input[type="text"] {
+                width: calc(100% - 22px);
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button {
+                padding: 10px 15px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            li {
+                background: #f9f9f9;
+                margin: 5px 0;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Mi App</h1>
-        <p> Hola Nemo</p>
-        <h3> AYUDAAA </h3>
-        <p> pene </p>
+        <div class="container">
+            <h1>Mi App</h1>
+            <form>
+                <label for="input">Escribe algo:</label>
+                <input type="text" id="input" placeholder="Ingresa texto aquí">
+                <button type="button" onclick="addItem()">Agregar</button>
+            </form>
+            <ul id="list">
+                <!-- Los elementos se agregarán aquí -->
+            </ul>
+        </div>
+        <script>
+            function addItem() {
+                const input = document.getElementById('input');
+                const list = document.getElementById('list');
+                if (input.value.trim() !== '') {
+                    const li = document.createElement('li');
+                    li.textContent = input.value;
+                    list.appendChild(li);
+                    input.value = '';
+                }
+            }
+        </script>
     </body>
 </html>
