@@ -22,3 +22,10 @@ node_modules/
 # Configuración de VS Code y PyCharm
 .vscode/
 .idea/
+
+# Ignorar archivos pyc
+__pycache__/
+*.pyc
+
+# Ignorar archivos de sistema macOS
+.DS_Store
