@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import home
+from . import views
 
 urlpatterns = [
-    path('', home, name='home'),  # Ruta para la página de inicio
+    path('', views.index, name='index'),
+    path('login/', views.login_view, name='login'),
+    path('chat/', views.chat, name='chat'),
 ]

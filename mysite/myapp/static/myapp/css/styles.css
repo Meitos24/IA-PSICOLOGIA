@@ -1,0 +1,200 @@
+/* styles.css */
+
+/* Body and general styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+}
+
+/* Login container */
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Security icon */
+.security-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.security-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Login title */
+.login-title {
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Input groups */
+.input-group-text {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.form-control {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
+
+/* Login button */
+.login-btn {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border: none;
+    padding: 0.875rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Toggle password button */
+#togglePassword {
+    border-left: none;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    transition: all 0.3s ease;
+}
+
+#togglePassword:hover {
+    background: #e2e8f0;
+    color: #374151;
+}
+
+/* Links */
+.login-links a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.forgot-password {
+    color: #64748b;
+}
+
+.register-link {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Footer */
+.login-footer {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+    
+    .security-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .security-icon i {
+        font-size: 1.75rem;
+    }
+    
+    .login-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation for form elements */
+.input-group {
+    animation: slideInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.input-group:nth-child(1) { animation-delay: 0.1s; }
+.input-group:nth-child(2) { animation-delay: 0.2s; }
+.login-btn { 
+    animation: slideInUp 0.6s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.login-links {
+    animation: slideInUp 0.6s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Security icon animation */
+.security-icon {
+    animation: bounceIn 0.8s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
